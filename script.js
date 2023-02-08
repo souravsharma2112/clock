@@ -1,0 +1,27 @@
+setInterval(() => {
+    let date = new Date();
+    let hour = date.getHours();
+    let minu = date.getMinutes();
+    let seco = date.getSeconds();
+    let datei = date.getDate();
+    let month = date.getMonth() + 1;
+    let year = date.getFullYear();  
+    let presDate = document.getElementById("presDate");
+    let presMonth = document.getElementById("presMonth");
+    let presYear = document.getElementById("presYear");
+    let presHour = document.getElementById("presHour");
+    let presMinu = document.getElementById("presMinu");
+    let presSeco = document.getElementById("presSeco");
+    presDate.innerHTML = datei;
+    presMonth.innerHTML = month;
+    presYear.innerHTML = year;
+    presHour.innerHTML = hour;
+    presMinu.innerHTML = minu;
+    presSeco.innerHTML = seco;
+    if(datei < 10){presDate.innerHTML = "0" + datei;}   
+    if(month < 10){presMonth.innerHTML = "0" + month;}  
+    if(year < 10){presYear.innerHTML = "0" + year;}    
+    if(hour < 10){presHour.innerHTML = "0" + hour;}    
+    if(minu < 10){presMinu.innerHTML = "0" + minu;}   
+    if(seco < 10){presSeco.innerHTML = "0" + seco;}
+},1000)
